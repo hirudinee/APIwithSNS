@@ -3,9 +3,9 @@ const sns = new AWS.SNS();
 exports.handler = function (event, context, callback) {
 
     console.log("Lambda is called");
-    
+
     sns.publish({
-        Message: 'This is a test',
+        Message: 'sample',
         MessageAttributes: {},
         MessageStructure: 'String',
         TopicArn: 'arn:aws:sns:us-east-1:480964559519:hiru_topic'
@@ -16,6 +16,7 @@ exports.handler = function (event, context, callback) {
         .catch(err => {
             // error handling goes here
         });
+
 
 
 }
